@@ -50,12 +50,6 @@ property `currency`"). The hero shows added / removed / **breaking** counts, a *
 only** toggle narrows to the risky set, and **Copy Markdown** hands you a summary to drop into
 the PR.
 
-Part of the [API Commons](https://apicommons.org/tools/) tools, alongside
-[Governance Coverage](https://github.com/api-commons/governance-coverage),
-[Governance Waivers](https://github.com/api-commons/governance-waivers),
-[API Validator](https://github.com/api-commons/api-validator), and
-[API Governance Graph](https://github.com/api-commons/api-governance-graph).
-
 ## Develop
 
 ```bash
@@ -82,3 +76,14 @@ A project of [API Evangelist](https://apievangelist.com), maintained openly unde
 [API Commons](https://apicommons.org). Free to fork; API Evangelist offers expert API design
 and versioning services — including standing up a real spec-review practice — when you want
 help. Apache-2.0.
+
+## Part of API Commons
+
+An open, browser-first tool from **[API Commons](https://apicommons.org)** — free, no backend, your data stays in your browser. Browse the full set at **[apicommons.org/tools](https://apicommons.org/tools/)**.
+
+**Related tools**
+- [Model Library](https://library.apicommons.org) — versioned model library + drift/breaking-change detection
+- [API Validator](https://validator.apicommons.org) — lint OpenAPI/AsyncAPI/Arazzo/JSON Schema in-browser
+- [Code-First Governance](https://codefirst.apicommons.org) — govern generated specs; fix findings in code
+- [API Governance Graph](https://graph.apicommons.org) — bind building blocks into one graph + Gaps view
+- [Spectral Reporter](https://reporter.apicommons.org) — Spectral JSON → self-contained HTML report
