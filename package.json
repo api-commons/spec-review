@@ -1,0 +1,20 @@
+{
+  "name": "spec-review",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "A browser-first, ref-resolving design-diff for OpenAPI (and AsyncAPI/Arazzo) — paste an old and a new spec, resolve $ref so reviewers see the real shape, and get a stakeholder-friendly, breaking-flagged change list plus a copyable Markdown summary for the PR.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "vite": "^5.4.11"
+  },
+  "dependencies": {
+    "yaml": "^2.6.1"
+  }
+}

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Spec Review — a ref-resolving, stakeholder-friendly design-diff for API specs</title>
+    <meta name="description" content="Paste an old and a new OpenAPI (or AsyncAPI / Arazzo) spec. Spec Review resolves $ref so you see the real shape, then produces a readable, breaking-flagged change list and a Markdown summary you can paste into a pull request. Runs entirely in your browser." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <!-- Google tag (gtag.js) — API Commons -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WNSPT4B4S8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WNSPT4B4S8');
+    </script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <strong>Spec Review</strong>
+        <span class="tag">review.apicommons.org</span>
+      </div>
+      <nav>
+        <a href="#" id="nav-about" title="Why review resolved specs">About</a>
+        <a href="https://apis.io" target="_blank" rel="noopener">APIs.io</a>
+        <a href="https://apicommons.org" target="_blank" rel="noopener">API Commons</a>
+        <a href="https://github.com/api-commons/spec-review" target="_blank" rel="noopener">GitHub</a>
+        <button id="engage-ae" class="engage-btn" type="button" title="Work with API Evangelist on API design & versioning">Get help</button>
+      </nav>
+    </header>
+    <!-- Laneworks ad network (ads.laneworks.net) -->
+    <script async src="https://ads.laneworks.net/embed.js"></script>
+    <div data-laneworks-ad="top-banner"></div>
+
+
+    <div class="toolbar">
+      <button class="measure-btn" id="review" type="button">Review ▸</button>
+      <button class="ghost-btn" id="load-sample" type="button">Load sample</button>
+      <label class="toggle"><input type="checkbox" id="breaking-only" /> Breaking only</label>
+      <button class="ghost-btn" id="copy-md" type="button">Copy Markdown</button>
+      <div class="counts" id="status" aria-live="polite"></div>
+    </div>
+
+    <details class="drawer" id="drawer" open>
+      <summary>Inputs — old spec &amp; new spec (OpenAPI · AsyncAPI · Arazzo, YAML or JSON)</summary>
+      <div class="io-grid">
+        <div class="io">
+          <h4>Old spec <span class="muted">(the current / released version)</span>
+            <span class="io-btns"><button class="mini-btn" id="up-old" type="button">Upload</button></span>
+          </h4>
+          <textarea id="old-text" spellcheck="false" placeholder="Paste the OLD spec (YAML or JSON)…"></textarea>
+          <input type="file" id="file-old" accept=".yaml,.yml,.json,application/json" hidden />
+        </div>
+        <div class="io">
+          <h4>New spec <span class="muted">(the proposed / design version)</span>
+            <span class="io-btns"><button class="mini-btn" id="up-new" type="button">Upload</button></span>
+          </h4>
+          <textarea id="new-text" spellcheck="false" placeholder="Paste the NEW spec (YAML or JSON)…"></textarea>
+          <input type="file" id="file-new" accept=".yaml,.yml,.json,application/json" hidden />
+        </div>
+      </div>
+    </details>
+
+    <main class="stage">
+      <section id="report"><div class="loading" id="loading">Loading…</div></section>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
